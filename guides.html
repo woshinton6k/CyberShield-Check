@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cybersecurity Research Guides — CyberShield Check</title>
+  <meta name="description" content="In-depth cybersecurity defense guides covering password entropy, FIDO2 passkeys, SIM-swap protection, SPF/DKIM/DMARC, and ransomware backups." />
+  <link rel="canonical" href="https://cybershieldcheck.com/guides.html" />
+  <link rel="icon" type="image/gif" href="/favicon.gif" />
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon.png" />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            slate: { 950: '#070b14', 900: '#0d1322', 850: '#121a2e', 800: '#19233c' },
+            emerald: { 400: '#34d399', 500: '#10b981', 600: '#059669' }
+          }
+        }
+      }
+    };
+  </script>
+  <style>
+    body { background-color: #070b14; color: #e2e8f0; }
+    .glass-card {
+      background: linear-gradient(180deg, rgba(18, 26, 46, 0.92) 0%, rgba(13, 19, 34, 0.96) 100%);
+      border: 1px solid rgba(52, 211, 153, 0.16);
+    }
+  </style>
+</head>
+<body class="antialiased selection:bg-emerald-500/30 selection:text-emerald-200">
+
+  <header class="sticky top-0 z-40 border-b border-slate-800/80 bg-slate-950/90 backdrop-blur-md">
+    <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3.5 sm:px-6">
+      <a href="/index.html" class="flex items-center gap-2.5 text-lg font-bold tracking-tight text-white">
+        <span class="flex h-9 w-9 items-center justify-center rounded-xl bg-emerald-600/20 border border-emerald-500/40 text-emerald-400">
+          <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
+          </svg>
+        </span>
+        <span>CyberShield <span class="text-emerald-400">Check</span></span>
+      </a>
+      <nav class="flex flex-wrap items-center gap-5 text-sm font-medium text-slate-300">
+        <a href="/index.html" class="hover:text-emerald-400 transition">Security Tools</a>
+        <a href="/guides.html" class="text-emerald-400 font-semibold">Security Guides</a>
+        <a href="/about.html" class="hover:text-emerald-400 transition">About &amp; Contact</a>
+        <a href="/privacy.html" class="hover:text-emerald-400 transition">Privacy &amp; Terms</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="mx-auto max-w-5xl px-4 py-14 sm:px-6">
+    <div class="mb-10">
+      <span class="font-mono text-xs font-semibold uppercase tracking-widest text-emerald-400">Threat Intelligence Library</span>
+      <h1 class="mt-2 text-3xl font-extrabold text-white sm:text-4xl">Comprehensive Cybersecurity Defense Guides</h1>
+      <p class="mt-3 max-w-3xl text-sm text-slate-300 leading-relaxed">
+        Detailed technical briefings written by Joel Agboike for individuals, remote teams, and small business owners looking to harden identity infrastructure, prevent financial fraud, and eliminate single points of failure.
+      </p>
+    </div>
+
+    <div class="space-y-8">
+      <article id="entropy" class="glass-card rounded-2xl p-6 sm:p-8">
+        <span class="font-mono text-xs text-emerald-400">GUIDE 01 • CRYPTOGRAPHY &amp; AUTHENTICATION</span>
+        <h2 class="mt-2 text-2xl font-bold text-white">Password Entropy vs. Complexity: Why Length Mathematically Defeats GPU Cracking Clusters</h2>
+        <div class="mt-4 space-y-4 text-sm text-slate-300 leading-relaxed">
+          <p>For decades, corporate IT policies forced users to create passwords like <code class="text-emerald-300">P@ssw0rd!23</code>—eight to ten characters mixing uppercase letters, numbers, and symbols. Modern offline hash-cracking hardware has rendered those rules obsolete. Specialized rigs equipped with multiple NVIDIA RTX 4090 or enterprise H100 GPUs can evaluate over 150 billion NTLM or MD5 hashes per second, and hundreds of millions of salted SHA-256 guesses every second.</p>
+          <p>Cryptographic strength is governed by <strong>information entropy</strong>, measured in bits using the formula E = L × log₂(R), where L is password length and R is the size of the character pool. Adding a single symbol to an 8-character password increases the search space marginally, whereas adding six extra lowercase characters multiplies the combinations by 26⁶—over 308 million times harder to brute-force.</p>
+          <p>Instead of predictable character substitutions, generate random 4-to-5 word Diceware passphrases separated by punctuation, such as <code class="text-emerald-300">timber-velvet-quarry-compass-48</code>. Drawing from a 7,776-word dictionary gives roughly 12.9 bits of entropy per word, pushing a 5-word passphrase beyond 64 bits of true randomness while remaining effortless to type on mobile devices. Test your own passphrase locally on our <a href="/index.html" class="text-emerald-400 underline">Password Entropy Analyzer</a>.</p>
+        </div>
+      </article>
+
+      <article id="passkeys" class="glass-card rounded-2xl p-6 sm:p-8">
+        <span class="font-mono text-xs text-emerald-400">GUIDE 02 • IDENTITY SECURITY</span>
+        <h2 class="mt-2 text-2xl font-bold text-white">FIDO2 Passkeys vs. SMS 2FA: Stopping Adversary-in-the-Middle (AiTM) Phishing</h2>
+        <div class="mt-4 space-y-4 text-sm text-slate-300 leading-relaxed">
+          <p>Enabling Two-Factor Authentication (2FA) via SMS text messages or standard 6-digit authenticator apps used to block 99% of automated credential attacks. Today, criminal toolkits such as Evilginx and Tycoon 2FA operate as <strong>Adversary-in-the-Middle (AiTM) reverse proxies</strong> that bypass traditional 6-digit codes entirely.</p>
+          <p>When a victim clicks a convincing phishing link, the attacker's server sits transparently between the victim and the legitimate login portal, capturing the authenticated <strong>session cookie</strong> in real time. FIDO2/WebAuthn passkeys and physical security keys eliminate AiTM phishing through <strong>origin binding</strong>: your device signs the authentication challenge only if the exact cryptographic domain matches the registered site.</p>
+        </div>
+      </article>
+
+      <article id="simswap" class="glass-card rounded-2xl p-6 sm:p-8">
+        <span class="font-mono text-xs text-emerald-400">GUIDE 03 • TELECOM &amp; MOBILE SECURITY</span>
+        <h2 class="mt-2 text-2xl font-bold text-white">How SIM-Swap &amp; Call-Forwarding Hijacks Happen—And How to Lock Down Your Mobile Number</h2>
+        <div class="mt-4 space-y-4 text-sm text-slate-300 leading-relaxed">
+          <p>Your mobile phone number acts as a master recovery key for dozens of financial apps and banking portals. In a <strong>SIM-swap attack</strong>, criminals socially engineer a mobile carrier representative into porting your phone number onto a SIM card or eSIM under their control.</p>
+          <p>A stealthier variant is <strong>unauthorized call and SMS forwarding</strong>. Dial <code class="text-emerald-300">*#21#</code> periodically on your keypad to audit active unconditional forwarding rules and <code class="text-emerald-300">##002#</code> to wipe unauthorized diversions. Always set a dedicated Number Transfer / Port-Out PIN with your mobile carrier.</p>
+        </div>
+      </article>
+
+      <article id="dmarc" class="glass-card rounded-2xl p-6 sm:p-8">
+        <span class="font-mono text-xs text-emerald-400">GUIDE 04 • EMAIL INFRASTRUCTURE</span>
+        <h2 class="mt-2 text-2xl font-bold text-white">SPF, DKIM, and DMARC Explained: Protecting Domains Against Executive Impersonation</h2>
+        <div class="mt-4 space-y-4 text-sm text-slate-300 leading-relaxed">
+          <p>Without cryptographic DNS policies, fraudsters can forge <code class="text-slate-200">From:</code> headers to send fake wire-transfer requests appearing to originate from your domain. Publishing <strong>SPF</strong>, <strong>DKIM</strong>, and an enforced <strong>DMARC</strong> record (<code class="text-emerald-300">p=reject</code>) instructs global mail providers to block spoofed messages before they reach an inbox. Verify any domain live using our <a href="/index.html" class="text-emerald-400 underline">Email Domain Spoofing Tool</a>.</p>
+        </div>
+      </article>
+
+      <article id="network" class="glass-card rounded-2xl p-6 sm:p-8">
+        <span class="font-mono text-xs text-emerald-400">GUIDE 05 • ZERO-TRUST HOME &amp; REMOTE NETWORKS</span>
+        <h2 class="mt-2 text-2xl font-bold text-white">Hardening Home &amp; Remote-Work Routers: DNS Filtering, Guest Isolation, and UPnP</h2>
+        <div class="mt-4 space-y-4 text-sm text-slate-300 leading-relaxed">
+          <p>Disable <strong>Universal Plug and Play (UPnP)</strong> and WPS in your router administration panel so compromised smart-home gadgets cannot open inbound firewall ports. Place IoT devices onto an isolated Guest Wi-Fi SSID and configure malware-blocking DNS resolvers such as Quad9 (<code class="text-emerald-300">9.9.9.9</code>) or Cloudflare (<code class="text-emerald-300">1.1.1.2</code>).</p>
+        </div>
+      </article>
+
+      <article id="ransomware" class="glass-card rounded-2xl p-6 sm:p-8">
+        <span class="font-mono text-xs text-emerald-400">GUIDE 06 • RANSOMWARE RESILIENCE</span>
+        <h2 class="mt-2 text-2xl font-bold text-white">The 3-2-1-1-0 Immutable Backup Strategy Against Modern Ransomware</h2>
+        <div class="mt-4 space-y-4 text-sm text-slate-300 leading-relaxed">
+          <p>Modern Ransomware-as-a-Service payloads target mapped network drives and synced cloud folders before encrypting local files. Maintain <strong>3</strong> total copies of critical data across <strong>2</strong> storage media types, with <strong>1</strong> copy stored offsite, at least <strong>1</strong> copy kept strictly offline or immutable (Object Lock / WORM storage), and <strong>0</strong> unverified errors through quarterly test restores.</p>
+        </div>
+      </article>
+
+      <article id="infostealers" class="glass-card rounded-2xl p-6 sm:p-8">
+        <span class="font-mono text-xs text-emerald-400">GUIDE 07 • BROWSER &amp; ENDPOINT SECURITY</span>
+        <h2 class="mt-2 text-2xl font-bold text-white">Defeating Infostealer Malware &amp; Session Token Theft in Modern Web Browsers</h2>
+        <div class="mt-4 space-y-4 text-sm text-slate-300 leading-relaxed">
+          <p>Infostealers disguised as cracked software or fake browser updates sweep browser profile folders in seconds to steal saved passwords and active OAuth cookies. Never store high-value banking or cloud passwords inside browser autofill—use an encrypted password manager protected by a hardware key.</p>
+        </div>
+      </article>
+
+      <article id="fintech" class="glass-card rounded-2xl p-6 sm:p-8">
+        <span class="font-mono text-xs text-emerald-400">GUIDE 08 • FINANCIAL &amp; FINTECH DEFENSE</span>
+        <h2 class="mt-2 text-2xl font-bold text-white">Compartmentalizing Banking, Virtual Cards, and Recovery Emails</h2>
+        <div class="mt-4 space-y-4 text-sm text-slate-300 leading-relaxed">
+          <p>Maintain a dedicated, private email address used exclusively for banking, tax portals, and domain registrars—never enter it on newsletters or public e-commerce sites. Pair online checkouts with single-merchant or spending-capped virtual debit cards so a breached merchant cannot drain your primary account.</p>
+        </div>
+      </article>
+    </div>
+  </main>
+
+  <footer class="border-t border-slate-800/80 bg-slate-950 py-10 text-xs text-slate-400">
+    <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-4 sm:flex-row sm:px-6">
+      <div><span class="font-semibold text-slate-200">© 2026 CyberShield Check (cybershieldcheck.com).</span> All rights reserved.</div>
+      <div class="flex flex-wrap items-center gap-5">
+        <a href="/index.html" class="hover:text-emerald-400">Tools</a>
+        <a href="/guides.html" class="hover:text-emerald-400">Guides</a>
+        <a href="/about.html" class="hover:text-emerald-400">About &amp; Contact</a>
+        <a href="/privacy.html" class="hover:text-emerald-400">Privacy &amp; Terms</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
