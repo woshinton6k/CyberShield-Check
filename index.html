@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CyberShield Check | Password Entropy & Personal Cyber Risk Analyzer</title>
-    <meta name="description" content="Free client-side password strength analyzer, entropy calculator, and personal cybersecurity risk assessment tool.">
+    <title>CyberShield Check | Password Entropy &amp; Personal Cyber Risk Analyzer</title>
+    <meta name="description" content="Free client-side password strength analyzer, cryptographic entropy calculator, personal cybersecurity risk assessment tool, and in-depth cyber defense guides.">
+    <link rel="canonical" href="https://cybershieldcheck.com/">
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Google Fonts: Inter & JetBrains Mono -->
@@ -22,15 +23,19 @@
                     },
                     colors: {
                         navy: {
-                            950: '#040812',
-                            900: '#0A1120',
-                            800: '#111C33',
-                            700: '#1A2947',
+                            950: '#0b1120',
+                            900: '#111827',
+                            800: '#1e293b',
+                            700: '#334155',
                         },
                         emerald: {
                             400: '#34D399',
                             500: '#10B981',
                             600: '#059669',
+                        },
+                        cyan: {
+                            400: '#22d3ee',
+                            500: '#06b6d4',
                         }
                     }
                 }
@@ -87,7 +92,7 @@
     </header>
 
     <!-- ==================== HERO SECTION ==================== -->
-    <section class="relative pt-10 pb-8 md:pt-14 md:pb-10 overflow-hidden">
+    <section class="relative pt-10 pb-8 md:pt-14 md:pb-12 overflow-hidden">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
             <div class="inline-flex items-center space-x-2 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-semibold tracking-wide uppercase mb-4">
                 <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
@@ -102,17 +107,8 @@
         </div>
     </section>
 
-    <!-- ==================== AD PLACEHOLDER: TOP LEADERBOARD ==================== -->
-    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full mb-8">
-        <!-- AdSense Top Display Banner Slot (728x90 / Responsive) -->
-        <div class="w-full min-h-[90px] bg-navy-900/60 border border-dashed border-slate-700/80 rounded-xl flex flex-col items-center justify-center p-3 text-center">
-            <span class="text-[10px] font-mono uppercase tracking-widest text-slate-500">Advertisement • Google AdSense Display Unit (Top Responsive)</span>
-            <span class="text-xs text-slate-600 mt-1">High-CPC Cybersecurity, VPN & Identity Protection Ad Space</span>
-        </div>
-    </div>
-
     <!-- ==================== MAIN INTERACTIVE TOOLS SECTION ==================== -->
-    <main id="tools" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full space-y-10 flex-grow">
+    <main id="tools" class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full space-y-12 flex-grow">
         
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
             
@@ -121,7 +117,7 @@
                 <div class="flex items-center justify-between mb-6">
                     <div>
                         <span class="text-xs font-mono text-emerald-400 uppercase tracking-wider font-semibold">Tool 01 • Cryptography</span>
-                        <h2 class="text-xl sm:text-2xl font-bold text-white mt-1">Password Entropy & Crack-Time Analyzer</h2>
+                        <h2 class="text-xl sm:text-2xl font-bold text-white mt-1">Password Entropy &amp; Crack-Time Analyzer</h2>
                     </div>
                     <div class="hidden sm:flex items-center space-x-1.5 text-xs text-slate-400 bg-navy-950 px-3 py-1.5 rounded-lg border border-slate-800">
                         <svg class="w-4 h-4 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -239,7 +235,7 @@
             <!-- TOOL 2: PERSONAL CYBER RISK & PHISHING QUIZ (5 Cols on Desktop) -->
             <div class="lg:col-span-5 bg-navy-900 border border-slate-800 rounded-2xl p-6 sm:p-8 shadow-xl">
                 <div class="mb-5">
-                    <span class="text-xs font-mono text-emerald-400 uppercase tracking-wider font-semibold">Tool 02 • Risk Audit</span>
+                    <span class="text-xs font-mono text-cyan-400 uppercase tracking-wider font-semibold">Tool 02 • Risk Audit</span>
                     <h2 class="text-xl sm:text-2xl font-bold text-white mt-1">Personal Cyber Risk Assessment</h2>
                     <p class="text-xs text-slate-400 mt-1">Answer 5 quick questions to uncover your account takeover vulnerability.</p>
                 </div>
@@ -288,121 +284,356 @@
                     </button>
                 </div>
 
-                <!-- Embedded Sidebar Ad Unit -->
-                <div class="mt-6 pt-6 border-t border-slate-800/80">
-                    <div class="w-full min-h-[120px] bg-navy-950/70 border border-dashed border-slate-700/80 rounded-xl flex flex-col items-center justify-center p-4 text-center">
-                        <span class="text-[10px] font-mono uppercase tracking-widest text-slate-500">Advertisement • In-Tool Square Unit</span>
-                        <span class="text-xs text-slate-600 mt-1">Password Manager & Hardware Security Key Sponsor Slot</span>
-                    </div>
+                <!-- Security Methodology Note -->
+                <div class="mt-6 pt-5 border-t border-slate-800/80 text-xs text-slate-400 leading-relaxed">
+                    <span class="text-emerald-400 font-semibold">Audit Framework:</span> Weighted against NIST SP 800-63B digital identity guidelines, CISA phishing-resistant MFA advisories, and OWASP credential defense standards.
                 </div>
             </div>
 
         </div>
 
-        <!-- ==================== AD PLACEHOLDER: MID-CONTENT BANNER ==================== -->
-        <div class="w-full">
-            <div class="w-full min-h-[100px] bg-navy-900/60 border border-dashed border-slate-700/80 rounded-xl flex flex-col items-center justify-center p-4 text-center">
-                <span class="text-[10px] font-mono uppercase tracking-widest text-slate-500">Advertisement • Google AdSense In-Article Unit</span>
-                <span class="text-xs text-slate-600 mt-1">Enterprise Endpoint Security & Cyber Insurance Banner</span>
+        <!-- ==================== EXPANDED IN-DEPTH CYBERSECURITY GUIDES SECTION ==================== -->
+        <section id="guides" class="pt-6 pb-8">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+                <div>
+                    <span class="text-xs font-mono text-emerald-400 uppercase tracking-wider font-semibold">Technical Knowledge Base</span>
+                    <h2 class="text-2xl sm:text-3xl font-bold text-white mt-1">In-Depth Cybersecurity &amp; Digital Hygiene Guides</h2>
+                    <p class="text-sm text-slate-400 mt-2 max-w-3xl">
+                        Comprehensive, research-backed briefings covering cryptographic authentication, network isolation, ransomware defense, email hardening, and enterprise cyber insurance readiness.
+                    </p>
+                </div>
+                <div class="flex items-center space-x-2 shrink-0">
+                    <button type="button" onclick="toggleAllArticles(true)" class="text-xs font-medium px-3 py-2 rounded-lg bg-navy-900 hover:bg-navy-800 text-emerald-400 border border-slate-700 transition">
+                        Expand All Guides
+                    </button>
+                    <button type="button" onclick="toggleAllArticles(false)" class="text-xs font-medium px-3 py-2 rounded-lg bg-navy-900 hover:bg-navy-800 text-slate-300 border border-slate-700 transition">
+                        Compact View
+                    </button>
+                </div>
             </div>
-        </div>
 
-        <!-- ==================== EDUCATIONAL ARTICLES SECTION (ADSENSE HIGH-VALUE CONTENT) ==================== -->
-        <section id="guides" class="pt-4 pb-12">
-            <div class="mb-8">
-                <span class="text-xs font-mono text-emerald-400 uppercase tracking-wider font-semibold">Knowledge Base</span>
-                <h2 class="text-2xl sm:text-3xl font-bold text-white mt-1">Essential Cybersecurity & Digital Hygiene Guides</h2>
-                <p class="text-sm text-slate-400 mt-2 max-w-3xl">
-                    In-depth technical briefings on cryptographic password standards, phishing defense, and multi-factor authentication protocols.
-                </p>
-            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6" id="articles-grid">
 
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-                
-                <!-- Article 1 -->
-                <article class="bg-navy-900 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between hover:border-slate-700 transition">
+                <!-- GUIDE 1 -->
+                <article class="bg-navy-900 border border-slate-800 rounded-2xl p-6 sm:p-7 flex flex-col justify-between hover:border-slate-700 transition">
                     <div>
-                        <div class="flex items-center space-x-2 text-xs text-emerald-400 font-mono mb-3">
-                            <span>CRYPTOGRAPHY</span>
-                            <span>•</span>
-                            <span>4 MIN READ</span>
+                        <div class="flex items-center justify-between text-xs text-emerald-400 font-mono mb-3">
+                            <span>01 • CRYPTOGRAPHY &amp; HASHING</span>
+                            <span>6 MIN READ</span>
                         </div>
-                        <h3 class="text-lg font-bold text-white mb-3 leading-snug">
-                            Understanding Password Entropy: Why Length Beats Complexity
+                        <h3 class="text-xl font-bold text-white mb-3 leading-snug">
+                            Password Entropy Explained: Why Length Beats Complexity Against Modern GPU Cracking
                         </h3>
-                        <p class="text-sm text-slate-300 leading-relaxed mb-4">
-                            Password entropy measures the mathematical unpredictability of a secret string in bits. While traditional policies forced users to substitute "@" for "a" or add a trailing exclamation mark, modern cracking clusters using hashcat and high-end GPUs test predictable substitutions in milliseconds.
-                        </p>
-                        <p class="text-sm text-slate-400 leading-relaxed">
-                            The formula <code class="text-emerald-300 bg-navy-950 px-1.5 py-0.5 rounded font-mono text-xs">E = L × log₂(R)</code> proves that increasing length (L) scales search space exponentially faster than expanding the character pool (R). A random 4-word Diceware passphrase achieves over 75 bits of entropy while remaining easy for humans to memorize.
-                        </p>
+                        <div class="space-y-3 text-sm text-slate-300 leading-relaxed">
+                            <p>
+                                For nearly two decades, corporate IT policies conditioned users to construct passwords out of eight characters containing at least one uppercase letter, one number, and one special symbol. While well-intentioned, those rules created predictable human habits—such as capitalizing the first letter, swapping the letter "a" for "@", and appending "1!" at the end. Modern password cracking suites like Hashcat utilize rule-based mangling engines specifically designed to exploit these human patterns within seconds.
+                            </p>
+                            <div class="article-full-content space-y-3 text-slate-300">
+                                <p>
+                                    True cryptographic resistance is measured in <strong>bits of entropy</strong>, calculated using the Shannon combinatorial formula <code class="text-emerald-300 bg-navy-950 px-1.5 py-0.5 rounded font-mono text-xs">E = L × log₂(R)</code>, where <em>L</em> represents password length and <em>R</em> represents the size of the character pool. Notice how the variables interact: expanding the character pool from lowercase letters (26) to full ASCII printable characters (94) increases <em>log₂(R)</em> from 4.7 bits per character to 6.55 bits per character—a modest 39% gain. Increasing password length <em>L</em>, however, multiplies total entropy linearly, which expands the attacker's brute-force keyspace exponentially (<code class="text-emerald-300 bg-navy-950 px-1.5 py-0.5 rounded font-mono text-xs">2^E</code>).
+                                </p>
+                                <p>
+                                    Consider real-world hardware benchmarks. A single consumer NVIDIA RTX 4090 graphics card running Hashcat can compute roughly 160 billion NTLM hashes per second or over 25 billion SHA-256 hashes per second. Multi-GPU cloud clusters rented for a few dollars per hour can test trillions of candidates per second against leaked, unsalted, or fast-hashed database dumps. An 8-character password with mixed symbols yields roughly 52 bits of entropy—meaning an offline GPU cluster can exhaust the entire keyspace in under two hours.
+                                </p>
+                                <p>
+                                    By contrast, a 16-character randomly generated string yields over 104 bits of entropy, requiring longer than the age of the universe to brute-force even with nation-state ASIC hardware. For passwords you must memorize—such as your device login or master password manager key—security engineers recommend the <strong>Diceware passphrase method</strong>. Selecting five or six unrelated dictionary words separated by hyphens (for example, <code class="text-cyan-300 bg-navy-950 px-1.5 py-0.5 rounded font-mono text-xs">glacier-cobalt-lantern-prism-falcon</code>) delivers 77 to 90+ bits of entropy while remaining effortless to type accurately. Always pair high-entropy credentials with slow, memory-hard key derivation functions like Argon2id or bcrypt on the server side so offline cracking remains computationally prohibitive.
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-500">
-                        <span>NIST SP 800-63B Compliant</span>
-                        <span class="text-emerald-400 font-medium">Verified Guide</span>
+                    <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs">
+                        <span class="text-slate-500 font-mono">NIST SP 800-63B Standard</span>
+                        <button type="button" onclick="toggleArticle(this)" class="text-emerald-400 hover:text-emerald-300 font-semibold transition">
+                            Show Less ↑
+                        </button>
                     </div>
                 </article>
 
-                <!-- Article 2 -->
-                <article class="bg-navy-900 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between hover:border-slate-700 transition">
+                <!-- GUIDE 2 -->
+                <article class="bg-navy-900 border border-slate-800 rounded-2xl p-6 sm:p-7 flex flex-col justify-between hover:border-slate-700 transition">
                     <div>
-                        <div class="flex items-center space-x-2 text-xs text-emerald-400 font-mono mb-3">
-                            <span>AUTHENTICATION</span>
-                            <span>•</span>
-                            <span>5 MIN READ</span>
+                        <div class="flex items-center justify-between text-xs text-cyan-400 font-mono mb-3">
+                            <span>02 • AUTHENTICATION DEFENSE</span>
+                            <span>7 MIN READ</span>
                         </div>
-                        <h3 class="text-lg font-bold text-white mb-3 leading-snug">
-                            Phishing-Resistant MFA: FIDO2 Passkeys vs. SMS One-Time Codes
+                        <h3 class="text-xl font-bold text-white mb-3 leading-snug">
+                            Hardware Security Keys vs. Authenticator Apps vs. SMS 2FA: Defeating AiTM Phishing
                         </h3>
-                        <p class="text-sm text-slate-300 leading-relaxed mb-4">
-                            Not all Multi-Factor Authentication (MFA) methods offer equal protection. SMS-based codes are vulnerable to SIM-swapping attacks and SS7 interception, while standard authenticator apps can still be bypassed by Adversary-in-the-Middle (AiTM) reverse-proxy phishing kits.
-                        </p>
-                        <p class="text-sm text-slate-400 leading-relaxed">
-                            To eliminate credential theft, security engineers recommend FIDO2/WebAuthn hardware keys or device-bound passkeys. Because cryptographic keys are bound to the legitimate domain origin, they will never authenticate on a lookalike phishing URL.
-                        </p>
+                        <div class="space-y-3 text-sm text-slate-300 leading-relaxed">
+                            <p>
+                                Enabling Multi-Factor Authentication (MFA) blocks over 99% of automated credential-stuffing attacks, yet not all second factors provide equal protection against targeted adversaries. As threat actors have adapted to widespread 2FA adoption, legacy verification methods like SMS text messages and even standard six-digit Time-Based One-Time Passwords (TOTP) have exposed structural weaknesses.
+                            </p>
+                            <div class="article-full-content space-y-3 text-slate-300">
+                                <p>
+                                    <strong>SMS One-Time Codes</strong> rely on the global cellular SS7 signaling network and telecom carrier customer support workflows. Attackers routinely execute <strong>SIM-swapping attacks</strong> by bribing or social-engineering mobile carrier agents into porting a victim's phone number onto an attacker-controlled SIM card. Once ported, every SMS verification code and password-reset text routes directly to the attacker. Furthermore, unencrypted SMS messages can be intercepted via rogue cellular base stations or SS7 protocol exploits.
+                                </p>
+                                <p>
+                                    <strong>Authenticator Apps (TOTP)</strong> such as Google Authenticator, Ente Auth, or Aegis eliminate telecom carrier risk by generating codes locally via a shared cryptographic seed. However, TOTP codes remain vulnerable to <strong>Adversary-in-the-Middle (AiTM) reverse-proxy phishing</strong> toolkits like Evilginx. In an AiTM attack, the victim clicks a convincing phishing link that proxies traffic in real time between the victim and the genuine login server. When the victim types their password and six-digit TOTP code, the proxy forwards both to the real service, captures the resulting authenticated session cookie, and hijacks the account instantaneously.
+                                </p>
+                                <p>
+                                    <strong>FIDO2 / WebAuthn Hardware Security Keys &amp; Passkeys</strong> solve AiTM phishing at the cryptographic protocol layer. When you register a hardware key (such as a YubiKey) or a device-bound passkey, the authenticator generates an asymmetric public-private key pair tied strictly to the legitimate website's TLS domain origin (<code class="text-cyan-300 bg-navy-950 px-1.5 py-0.5 rounded font-mono text-xs">cybershieldcheck.com</code>). If an attacker lures you to a lookalike domain (<code class="text-rose-300 bg-navy-950 px-1.5 py-0.5 rounded font-mono text-xs">cybershield-check-login.com</code>), your browser refuses to sign the authentication challenge because the origin hash does not match. For maximum account survivability, register at least two hardware keys—one for daily carry and a backup stored in a fireproof safe.
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-500">
-                        <span>Zero-Trust Architecture</span>
-                        <span class="text-emerald-400 font-medium">Verified Guide</span>
+                    <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs">
+                        <span class="text-slate-500 font-mono">FIDO2 / WebAuthn Protocol</span>
+                        <button type="button" onclick="toggleArticle(this)" class="text-emerald-400 hover:text-emerald-300 font-semibold transition">
+                            Show Less ↑
+                        </button>
                     </div>
                 </article>
 
-                <!-- Article 3 -->
-                <article class="bg-navy-900 border border-slate-800 rounded-2xl p-6 flex flex-col justify-between hover:border-slate-700 transition">
+                <!-- GUIDE 3 -->
+                <article class="bg-navy-900 border border-slate-800 rounded-2xl p-6 sm:p-7 flex flex-col justify-between hover:border-slate-700 transition">
                     <div>
-                        <div class="flex items-center space-x-2 text-xs text-emerald-400 font-mono mb-3">
-                            <span>THREAT DEFENSE</span>
-                            <span>•</span>
-                            <span>4 MIN READ</span>
+                        <div class="flex items-center justify-between text-xs text-emerald-400 font-mono mb-3">
+                            <span>03 • NETWORK ARCHITECTURE</span>
+                            <span>6 MIN READ</span>
                         </div>
-                        <h3 class="text-lg font-bold text-white mb-3 leading-snug">
-                            Preventing Credential Stuffing & Data Breach Cascades
+                        <h3 class="text-xl font-bold text-white mb-3 leading-snug">
+                            Zero-Trust Home &amp; Remote Work Network Architecture: A Practical Blueprint
                         </h3>
-                        <p class="text-sm text-slate-300 leading-relaxed mb-4">
-                            When a third-party retailer or forum suffers a database breach, billions of email-and-password pairs are aggregated into automated credential stuffing lists. Attackers use botnets to test those exact combinations across banking, cloud storage, and primary email accounts.
-                        </p>
-                        <p class="text-sm text-slate-400 leading-relaxed">
-                            Isolating every online service with a unique, randomly generated password stored inside an encrypted zero-knowledge password manager ensures that a single corporate breach never compromises your wider digital identity.
-                        </p>
+                        <div class="space-y-3 text-sm text-slate-300 leading-relaxed">
+                            <p>
+                                Traditional home networks operate on a flat trust model: once any device connects to your Wi-Fi router, it shares an unrestricted local broadcast domain with every laptop, smartphone, NAS drive, and smart home gadget on the premises. If an inexpensive smart bulb or unpatched smart TV suffers a firmware compromise, an attacker gains a direct foothold inside your local network to scan work laptops and intercept unencrypted internal traffic.
+                            </p>
+                            <div class="article-full-content space-y-3 text-slate-300">
+                                <p>
+                                    Applying <strong>Zero-Trust Network Segmentation</strong> at home begins with hardening your gateway router. Immediately disable Universal Plug and Play (UPnP)—which allows rogue software to silently open inbound firewall ports—and turn off remote WAN administration so the router's management panel is unreachable from the public internet. Enforce <strong>WPA3-Personal (SAE)</strong> encryption with a 20-character random Wi-Fi passphrase, and schedule monthly checks for vendor firmware updates to patch critical routing vulnerabilities.
+                                </p>
+                                <p>
+                                    Next, isolate untrusted hardware using <strong>VLANs (Virtual Local Area Networks)</strong> or dedicated Guest Wi-Fi networks with AP/Client Isolation enabled. Place primary workstations, financial tablets, and encrypted backup drives on your trusted Core VLAN. Place smart TVs, security cameras, voice assistants, and visiting guests on an isolated IoT/Guest SSID configured with firewall rules that permit outbound internet access while blocking all lateral traffic toward your Core subnet.
+                                </p>
+                                <p>
+                                    Finally, encrypt your DNS resolution layer. Standard DNS queries travel in plaintext over UDP port 53, allowing Internet Service Providers and local network observers to log every domain your devices visit. Configure your router or operating system to use <strong>DNS-over-HTTPS (DoH)</strong> or <strong>DNS-over-TLS (DoT)</strong> via privacy-respecting, malware-filtering resolvers such as Quad9 (<code class="text-emerald-300 bg-navy-950 px-1.5 py-0.5 rounded font-mono text-xs">9.9.9.9</code>) or Cloudflare (<code class="text-emerald-300 bg-navy-950 px-1.5 py-0.5 rounded font-mono text-xs">1.1.1.2</code>). This combination blocks known malicious command-and-control domains at the network edge while preventing ISP DNS hijacking.
+                                </p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs text-slate-500">
-                        <span>Cyber Hygiene Standard</span>
-                        <span class="text-emerald-400 font-medium">Verified Guide</span>
+                    <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs">
+                        <span class="text-slate-500 font-mono">Zero-Trust Segmentation</span>
+                        <button type="button" onclick="toggleArticle(this)" class="text-emerald-400 hover:text-emerald-300 font-semibold transition">
+                            Show Less ↑
+                        </button>
+                    </div>
+                </article>
+
+                <!-- GUIDE 4 -->
+                <article class="bg-navy-900 border border-slate-800 rounded-2xl p-6 sm:p-7 flex flex-col justify-between hover:border-slate-700 transition">
+                    <div>
+                        <div class="flex items-center justify-between text-xs text-cyan-400 font-mono mb-3">
+                            <span>04 • INCIDENT RESPONSE</span>
+                            <span>7 MIN READ</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3 leading-snug">
+                            How Ransomware-as-a-Service (RaaS) Targets Small Businesses and Solo Founders
+                        </h3>
+                        <div class="space-y-3 text-sm text-slate-300 leading-relaxed">
+                            <p>
+                                Modern ransomware operations no longer rely on lone hackers manually writing custom malware for a single target. Today's cybercrime ecosystem operates under a specialized <strong>Ransomware-as-a-Service (RaaS)</strong> franchise model where core developers lease encryption payloads and negotiation portals to affiliates, who routinely automate scans across millions of small business domains, cloud servers, and solo founder workstations.
+                            </p>
+                            <div class="article-full-content space-y-3 text-slate-300">
+                                <p>
+                                    Most intrusions begin with <strong>Initial Access Brokers (IABs)</strong> exploiting three predictable gaps: exposed Remote Desktop Protocol (RDP) ports, unpatched edge VPN appliances, and leaked employee credentials purchased from infostealer logs. Once inside, affiliates escalate privileges, disable Windows Defender or Endpoint Detection and Response (EDR) agents, and exfiltrate sensitive client records before deploying file-encrypting payloads—a tactic known as <strong>double extortion</strong>.
+                                </p>
+                                <p>
+                                    Because ransomware affiliates actively hunt for connected network shares and cloud sync folders to wipe backups first, standard external hard drives left plugged into a workstation offer zero protection. Resilient organizations implement the <strong>3-2-1-1-0 Backup Strategy</strong>: maintain at least <strong>3</strong> total copies of critical data, stored on <strong>2</strong> distinct media types, with <strong>1</strong> copy stored off-site, <strong>1</strong> copy configured as strictly <strong>immutable (WORM — Write Once, Read Many)</strong> or air-gapped offline, and <strong>0</strong> unverified backup errors during monthly test restores.
+                                </p>
+                                <p>
+                                    Cloud object storage buckets configured with Object Lock in Compliance Mode prevent even compromised administrator credentials from deleting or altering backup snapshots before the retention timer expires. Pair immutable backups with strict least-privilege user accounts—never perform daily email or web browsing while logged into a local Administrator profile—and maintain an offline printed incident response checklist containing your domain registrar lock contacts, cloud provider emergency support lines, and legal counsel.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs">
+                        <span class="text-slate-500 font-mono">3-2-1-1-0 Backup Standard</span>
+                        <button type="button" onclick="toggleArticle(this)" class="text-emerald-400 hover:text-emerald-300 font-semibold transition">
+                            Show Less ↑
+                        </button>
+                    </div>
+                </article>
+
+                <!-- GUIDE 5 -->
+                <article class="bg-navy-900 border border-slate-800 rounded-2xl p-6 sm:p-7 flex flex-col justify-between hover:border-slate-700 transition">
+                    <div>
+                        <div class="flex items-center justify-between text-xs text-emerald-400 font-mono mb-3">
+                            <span>05 • EMAIL INFRASTRUCTURE</span>
+                            <span>6 MIN READ</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3 leading-snug">
+                            Email Authentication Hardening: Configuring SPF, DKIM, and DMARC to Stop Spoofing
+                        </h3>
+                        <div class="space-y-3 text-sm text-slate-300 leading-relaxed">
+                            <p>
+                                The Simple Mail Transfer Protocol (SMTP) was originally engineered without built-in sender identity verification, allowing anyone on the internet to forge the "From" header of an email to impersonate your domain. Without cryptographic DNS authentication records, attackers can send fraudulent invoices or malware-laced links appearing to originate directly from your company's domain name.
+                            </p>
+                            <div class="article-full-content space-y-3 text-slate-300">
+                                <p>
+                                    Securing domain reputation requires deploying three interlocking DNS TXT records. First, <strong>SPF (Sender Policy Framework)</strong> publishes an explicit allowlist of mail server IP addresses and third-party services authorized to send email on behalf of your domain (for example, <code class="text-emerald-300 bg-navy-950 px-1.5 py-0.5 rounded font-mono text-xs">v=spf1 include:_spf.google.com -all</code>). Always conclude your SPF record with the hard-fail qualifier <code class="text-emerald-300 bg-navy-950 px-1.5 py-0.5 rounded font-mono text-xs">-all</code> rather than soft-fail <code class="text-amber-300 bg-navy-950 px-1.5 py-0.5 rounded font-mono text-xs">~all</code> once all legitimate senders are cataloged.
+                                </p>
+                                <p>
+                                    Second, <strong>DKIM (DomainKeys Identified Mail)</strong> attaches a cryptographic RSA or Ed25519 digital signature to every outgoing message header. Receiving mail servers fetch your public key from a selector subdomain (<code class="text-cyan-300 bg-navy-950 px-1.5 py-0.5 rounded font-mono text-xs">selector._domainkey.yourdomain.com</code>) to verify that the email body and headers were not altered in transit. Rotate DKIM 2048-bit keys every six to twelve months to minimize key-exposure windows.
+                                </p>
+                                <p>
+                                    Third, <strong>DMARC (Domain-based Message Authentication, Reporting, and Conformance)</strong> ties SPF and DKIM together through strict domain alignment and instructs receiving providers (Gmail, Microsoft 365, Yahoo) how to handle unauthenticated mail. Begin monitoring with <code class="text-cyan-300 bg-navy-950 px-1.5 py-0.5 rounded font-mono text-xs">p=none</code> to inspect aggregate XML reports, advance to <code class="text-amber-300 bg-navy-950 px-1.5 py-0.5 rounded font-mono text-xs">p=quarantine</code>, and ultimately enforce <code class="text-emerald-300 bg-navy-950 px-1.5 py-0.5 rounded font-mono text-xs">p=reject</code> so forged emails are dropped before ever reaching a recipient's inbox.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs">
+                        <span class="text-slate-500 font-mono">RFC 7489 DMARC Enforcement</span>
+                        <button type="button" onclick="toggleArticle(this)" class="text-emerald-400 hover:text-emerald-300 font-semibold transition">
+                            Show Less ↑
+                        </button>
+                    </div>
+                </article>
+
+                <!-- GUIDE 6 -->
+                <article class="bg-navy-900 border border-slate-800 rounded-2xl p-6 sm:p-7 flex flex-col justify-between hover:border-slate-700 transition">
+                    <div>
+                        <div class="flex items-center justify-between text-xs text-cyan-400 font-mono mb-3">
+                            <span>06 • ENDPOINT &amp; BROWSER SECURITY</span>
+                            <span>6 MIN READ</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3 leading-snug">
+                            Browser Isolation, Session Hijacking, and Infostealer Malware Defense
+                        </h3>
+                        <div class="space-y-3 text-sm text-slate-300 leading-relaxed">
+                            <p>
+                                Modern web browsers have evolved into full-fledged operating environments storing active authentication tokens, saved autofill credentials, cloud console sessions, and cryptocurrency wallet extensions. Consequently, <strong>infostealer malware families</strong> (such as Lumma, RedLine, and Vidar) have become one of the fastest-growing threats on the internet, targeting browser profile directories to harvest active session cookies without needing your password or 2FA code.
+                            </p>
+                            <div class="article-full-content space-y-3 text-slate-300">
+                                <p>
+                                    When you check "Keep me signed in" on an email or cloud dashboard, the server issues a long-lived session token stored inside your browser's local SQLite cookie database. If you inadvertently execute a trojanized software crack, malicious PDF script, or fake browser update, an infostealer reads that cookie file in milliseconds and uploads it to a criminal Telegram bot. Importing that stolen cookie into an anti-detect browser grants the attacker instant access to your authenticated session, completely bypassing Multi-Factor Authentication.
+                                </p>
+                                <p>
+                                    To neutralize session hijacking, enforce <strong>Browser Profile Compartmentalization</strong>. Maintain a dedicated, hardened browser profile strictly for banking, primary email, domain registrars, and cloud infrastructure—never install third-party browser extensions or browse general websites inside that privileged profile. Configure sensitive web sessions to clear cookies upon browser exit so persistent tokens never linger on disk overnight.
+                                </p>
+                                <p>
+                                    Additionally, keep Chromium or Firefox auto-updates active to benefit from <strong>App-Bound Encryption</strong> (which ties cookie encryption keys to Windows DPAPI/system-level services) and <strong>Device Bound Session Credentials (DBSC)</strong>, an emerging W3C standard that cryptographically binds session cookies to your computer's hardware Trusted Platform Module (TPM) chip, rendering stolen cookies useless on any external machine.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs">
+                        <span class="text-slate-500 font-mono">Session Token Protection</span>
+                        <button type="button" onclick="toggleArticle(this)" class="text-emerald-400 hover:text-emerald-300 font-semibold transition">
+                            Show Less ↑
+                        </button>
+                    </div>
+                </article>
+
+                <!-- GUIDE 7 -->
+                <article class="bg-navy-900 border border-slate-800 rounded-2xl p-6 sm:p-7 flex flex-col justify-between hover:border-slate-700 transition">
+                    <div>
+                        <div class="flex items-center justify-between text-xs text-emerald-400 font-mono mb-3">
+                            <span>07 • FINTECH &amp; CLOUD HYGIENE</span>
+                            <span>6 MIN READ</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3 leading-snug">
+                            Cloud Storage &amp; Multi-Currency FinTech Account Security Best Practices
+                        </h3>
+                        <div class="space-y-3 text-sm text-slate-300 leading-relaxed">
+                            <p>
+                                Digital banking platforms, multi-currency virtual card providers, payment gateways, and cloud hosting accounts represent high-value targets because unauthorized transfers are often irreversible. Securing financial and cloud infrastructure requires eliminating single points of failure across your email identity, mobile number, and withdrawal permissions.
+                            </p>
+                            <div class="article-full-content space-y-3 text-slate-300">
+                                <p>
+                                    Start with <strong>Email Identity Isolation</strong>. Never register your banking, payment, or domain registrar accounts using the same public email address you display on social media profiles, resumes, or newsletter signups. Create a private, non-public email alias hosted on a security-hardened provider with hardware-key 2FA enabled, and use it exclusively for financial and infrastructure logins. If attackers do not know your login email identifier, targeted spear-phishing and credential-stuffing attempts fail before they start.
+                                </p>
+                                <p>
+                                    Second, lock down your telecom carrier account to defeat SIM-swap fraud. Contact your mobile provider to set a custom <strong>account port-out PIN / Number Lock</strong> that cannot be reset via basic personal information like your date of birth or home address. Wherever your FinTech or cloud provider supports an Authenticator App or FIDO2 Passkey, disable SMS fallback completely inside your security settings.
+                                </p>
+                                <p>
+                                    Third, enable <strong>Withdrawal Allowlisting and Transaction Alerts</strong>. Configure instant push and email notifications for every login attempt, virtual card creation, and outbound transfer regardless of dollar amount. On platforms supporting beneficiary allowlists, restrict transfers solely to pre-verified bank accounts subject to a mandatory 24-to-48-hour security cooling-off delay before any new destination address can be added—giving you ample time to freeze the account if an intrusion ever occurs.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs">
+                        <span class="text-slate-500 font-mono">Financial Identity Hardening</span>
+                        <button type="button" onclick="toggleArticle(this)" class="text-emerald-400 hover:text-emerald-300 font-semibold transition">
+                            Show Less ↑
+                        </button>
+                    </div>
+                </article>
+
+                <!-- GUIDE 8 -->
+                <article class="bg-navy-900 border border-slate-800 rounded-2xl p-6 sm:p-7 flex flex-col justify-between hover:border-slate-700 transition">
+                    <div>
+                        <div class="flex items-center justify-between text-xs text-cyan-400 font-mono mb-3">
+                            <span>08 • GOVERNANCE &amp; COMPLIANCE</span>
+                            <span>6 MIN READ</span>
+                        </div>
+                        <h3 class="text-xl font-bold text-white mb-3 leading-snug">
+                            Cyber Insurance &amp; Data Breach Liability: What Audits Require Before Underwriting
+                        </h3>
+                        <div class="space-y-3 text-sm text-slate-300 leading-relaxed">
+                            <p>
+                                As data privacy regulations tighten and ransomware payouts escalate, cyber liability insurers have overhauled their underwriting standards. Obtaining or renewing a cyber insurance policy today requires passing rigorous technical security questionnaires—and misrepresenting your controls on an application can void coverage immediately after a breach occurs.
+                            </p>
+                            <div class="article-full-content space-y-3 text-slate-300">
+                                <p>
+                                    Underwriters focus first on <strong>Universal MFA Enforcement</strong>. Carriers require verifiable proof that Multi-Factor Authentication is enforced across 100% of corporate email accounts, remote VPN/RDP gateways, cloud administrator consoles, and privileged identity management (PIM) roles. Partial deployment or exemptions for executives frequently result in automatic policy denial or severe ransomware sub-limits.
+                                </p>
+                                <p>
+                                    Second, insurers mandate continuous <strong>Endpoint Detection and Response (EDR)</strong> and strict <strong>Vulnerability Patch SLAs</strong>. Unlike legacy signature-based antivirus, modern EDR agents monitor behavioral process trees, memory injection, and anomalous PowerShell execution in real time. Carriers routinely scan applicants' external IP ranges using automated attack-surface rating tools before quoting; any critical CVE left unpatched for more than 14 to 30 days on internet-facing servers triggers immediate premium surcharges.
+                                </p>
+                                <p>
+                                    Finally, organizations must document <strong>Employee Phishing Simulation Training</strong> and verified offline backups. Maintaining an up-to-date asset inventory, enforcing least-privilege access reviews every quarter, and logging centralized security telemetry for at least 90 days not only lowers annual cyber insurance premiums by 15% to 30%, but also establishes defensible due diligence under GDPR, CCPA, and industry compliance frameworks.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-6 pt-4 border-t border-slate-800/80 flex items-center justify-between text-xs">
+                        <span class="text-slate-500 font-mono">Underwriting &amp; Risk Governance</span>
+                        <button type="button" onclick="toggleArticle(this)" class="text-emerald-400 hover:text-emerald-300 font-semibold transition">
+                            Show Less ↑
+                        </button>
                     </div>
                 </article>
 
             </div>
         </section>
 
+        <!-- ==================== DEDICATED ABOUT & METHODOLOGY SECTION (CRAWLABLE ON PAGE) ==================== -->
+        <section id="about-section" class="bg-navy-900/80 border border-slate-800 rounded-2xl p-6 sm:p-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 items-center">
+                <div class="lg:col-span-8 space-y-3">
+                    <span class="text-xs font-mono text-emerald-400 uppercase tracking-wider font-semibold">About CyberShield Check</span>
+                    <h2 class="text-xl sm:text-2xl font-bold text-white">Built on Zero-Knowledge Privacy &amp; Practical Security Engineering</h2>
+                    <p class="text-sm text-slate-300 leading-relaxed">
+                        <strong>CyberShield Check</strong> (<span class="text-emerald-400 font-mono">cybershieldcheck.com</span>) is founded and maintained by <strong>Joel Agboike</strong>, a Computer Science graduate (B.Ed.) and cybersecurity practitioner dedicated to making cryptographic hygiene and threat auditing accessible to everyday internet users, remote workers, and independent founders.
+                    </p>
+                    <p class="text-sm text-slate-400 leading-relaxed">
+                        Every diagnostic calculator on this platform runs 100% locally inside your browser's JavaScript runtime using the native Web Crypto API—meaning passwords, passphrases, and assessment answers are never transmitted to any external server or stored in any database.
+                    </p>
+                </div>
+                <div class="lg:col-span-4 bg-navy-950 border border-slate-800 rounded-xl p-5 space-y-3">
+                    <div class="text-xs font-mono uppercase tracking-wider text-slate-400">Editorial &amp; Security Desk</div>
+                    <div class="text-sm font-semibold text-white">Joel Agboike</div>
+                    <div class="text-xs text-slate-400">Founder &amp; Lead Security Analyst</div>
+                    <div class="pt-2 border-t border-slate-800 flex flex-col space-y-2 text-xs">
+                        <a href="mailto:joelagboike6k@gmail.com" class="text-emerald-400 hover:underline font-mono">joelagboike6k@gmail.com</a>
+                        <button type="button" onclick="openModal('contact')" class="w-full py-2 px-3 rounded-lg bg-slate-800 hover:bg-slate-700 text-white font-medium transition text-center">
+                            Contact Editorial Team
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
     <!-- ==================== FOOTER (ADSENSE COMPLIANCE LINKS) ==================== -->
-    <footer class="bg-navy-900 border-t border-slate-800 mt-12">
+    <footer class="bg-navy-900 border-t border-slate-800 mt-14">
         <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
             <div class="flex flex-col md:flex-row justify-between items-start md:items-center gap-6">
                 <div>
                     <div class="flex items-center space-x-2">
                         <span class="font-bold text-lg text-white">CyberShield <span class="text-emerald-400">Check</span></span>
+                        <span class="text-xs font-mono text-slate-500">• cybershieldcheck.com</span>
                     </div>
                     <p class="text-xs text-slate-400 mt-2 max-w-md">
                         Independent client-side cybersecurity diagnostics and educational resources. All password calculations run locally in browser memory and are never transmitted or logged.
@@ -410,6 +641,8 @@
                 </div>
 
                 <div class="flex flex-wrap gap-4 sm:gap-6 text-xs font-medium text-slate-300">
+                    <a href="#tools" class="hover:text-emerald-400 transition">Security Tools</a>
+                    <a href="#guides" class="hover:text-emerald-400 transition">Security Guides</a>
                     <button onclick="openModal('about')" class="hover:text-emerald-400 transition">About Us</button>
                     <button onclick="openModal('privacy')" class="hover:text-emerald-400 transition">Privacy Policy</button>
                     <button onclick="openModal('terms')" class="hover:text-emerald-400 transition">Terms of Service</button>
@@ -418,8 +651,8 @@
             </div>
 
             <div class="mt-8 pt-6 border-t border-slate-800/80 flex flex-col sm:flex-row justify-between items-center text-xs text-slate-500 gap-2">
-                <span>&copy; 2026 CyberShield Check. All rights reserved.</span>
-                <span>Security Disclaimer: For educational & diagnostic auditing purposes.</span>
+                <span>&copy; 2026 CyberShield Check (cybershieldcheck.com). All rights reserved.</span>
+                <span>Contact: <a href="mailto:joelagboike6k@gmail.com" class="text-slate-400 hover:text-emerald-400">joelagboike6k@gmail.com</a></span>
             </div>
         </div>
     </footer>
@@ -430,7 +663,7 @@
             <!-- Modal Header -->
             <div class="flex justify-between items-center px-6 py-4 border-b border-slate-800">
                 <h3 id="modal-title" class="text-lg font-bold text-white">Policy Information</h3>
-                <button onclick="closeModal()" class="p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-navy-800 transition">
+                <button onclick="closeModal()" class="p-1.5 rounded-lg text-slate-400 hover:text-white hover:bg-navy-800 transition" aria-label="Close Modal">
                     <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                     </svg>
@@ -459,7 +692,36 @@
         }
         mobileMenuBtn.addEventListener('click', toggleMobileMenu);
 
-        // --- 2. PASSWORD ENTROPY & STRENGTH ANALYZER ---
+        // --- 2. EXPANDABLE ARTICLE READER TOGGLES ---
+        function toggleArticle(btn) {
+            const article = btn.closest('article');
+            const fullContent = article.querySelector('.article-full-content');
+            const isHidden = fullContent.classList.contains('hidden');
+            if (isHidden) {
+                fullContent.classList.remove('hidden');
+                btn.textContent = 'Show Less ↑';
+            } else {
+                fullContent.classList.add('hidden');
+                btn.textContent = 'Read Full Guide ↓';
+            }
+        }
+
+        function toggleAllArticles(expand) {
+            const articles = document.querySelectorAll('#articles-grid article');
+            articles.forEach(article => {
+                const fullContent = article.querySelector('.article-full-content');
+                const btn = article.querySelector('button');
+                if (expand) {
+                    fullContent.classList.remove('hidden');
+                    btn.textContent = 'Show Less ↑';
+                } else {
+                    fullContent.classList.add('hidden');
+                    btn.textContent = 'Read Full Guide ↓';
+                }
+            });
+        }
+
+        // --- 3. PASSWORD ENTROPY & STRENGTH ANALYZER ---
         const passwordInput = document.getElementById('password-input');
         const toggleVisibilityBtn = document.getElementById('toggle-visibility');
         const copyPasswordBtn = document.getElementById('copy-password-btn');
@@ -664,7 +926,7 @@
 
         passwordInput.addEventListener('input', (e) => analyzePassword(e.target.value));
 
-        // --- 3. PERSONAL CYBER RISK ASSESSMENT QUIZ ---
+        // --- 4. PERSONAL CYBER RISK ASSESSMENT QUIZ ---
         const quizQuestions = [
             {
                 q: "1. How do you manage passwords across your email, banking, and social accounts?",
@@ -799,46 +1061,53 @@
         // Initialize quiz on load
         renderQuizStep();
 
-        // --- 4. ADSENSE COMPLIANCE MODALS (ABOUT, PRIVACY, TERMS, CONTACT) ---
+        // --- 5. ADSENSE COMPLIANCE MODALS (ABOUT, PRIVACY, TERMS, CONTACT) ---
         const modalEl = document.getElementById('compliance-modal');
         const modalTitle = document.getElementById('modal-title');
         const modalBody = document.getElementById('modal-body');
 
         const legalContent = {
             about: {
-                title: 'About CyberShield Check',
+                title: 'About CyberShield Check (cybershieldcheck.com)',
                 body: `
-                    <p><strong>CyberShield Check</strong> is an independent cybersecurity utility platform dedicated to making cryptographic hygiene and personal threat auditing accessible to everyday internet users.</p>
-                    <p>Our tools are engineered on a strict <strong>Zero-Knowledge Client-Side Architecture</strong>. Unlike server-based checkers that transmit your keystrokes over HTTPS to backend APIs, every entropy calculation and risk assessment on CyberShield Check executes strictly inside your device's local JavaScript runtime.</p>
-                    <p>Our editorial team publishes research-backed guides aligned with NIST SP 800-63B and OWASP authentication standards to help individuals and small businesses prevent credential stuffing and phishing attacks.</p>
+                    <p><strong>CyberShield Check</strong> (<span class="text-emerald-400 font-mono">https://cybershieldcheck.com</span>) is an independent cybersecurity diagnostic and education platform founded and maintained by <strong>Joel Agboike</strong> (B.Ed. Computer Science &amp; Cybersecurity Specialist).</p>
+                    <p>Our tools are engineered on a strict <strong>Zero-Knowledge Client-Side Architecture</strong>. Unlike server-based checkers that transmit your keystrokes over HTTPS to backend APIs, every entropy calculation and risk assessment on CyberShield Check executes strictly inside your device's local JavaScript runtime using the browser's Web Crypto API.</p>
+                    <p>Our editorial mission is to publish actionable, research-backed guides aligned with NIST SP 800-63B, FIDO2/WebAuthn, and OWASP authentication standards to help individuals, remote professionals, and small businesses prevent account takeovers and ransomware intrusions.</p>
                 `
             },
             privacy: {
-                title: 'Privacy Policy & Cookie Disclosure',
+                title: 'Privacy Policy & Cookie Disclosure (cybershieldcheck.com)',
                 body: `
-                    <p><strong>Effective Date:</strong> January 1, 2026</p>
-                    <p><strong>1. Zero Password Collection:</strong> We do not collect, transmit, store, or log any passwords, passphrases, or quiz responses entered into our tools. All diagnostic processing happens locally within your browser session.</p>
-                    <p><strong>2. Advertising & Third-Party Cookies (Google AdSense):</strong> We partner with Google AdSense to display advertisements that keep our tools free. Google and its partners use cookies (such as the DoubleClick cookie) to serve ads based on your prior visits to this website or other websites on the internet.</p>
-                    <p><strong>3. Opt-Out Choices:</strong> Users may opt out of personalized advertising by visiting <a href="https://adssettings.google.com" target="_blank" rel="noopener" class="text-emerald-400 underline">Google Ads Settings</a> or <a href="https://www.aboutads.info" target="_blank" rel="noopener" class="text-emerald-400 underline">www.aboutads.info</a>.</p>
-                    <p><strong>4. Analytics & Log Files:</strong> Like standard web hosts, our CDN infrastructure may record anonymized IP addresses, browser types, and timestamps solely for DDoS mitigation and aggregated traffic metrics.</p>
+                    <p><strong>Effective Date:</strong> November 21, 2026 &bull; <strong>Domain:</strong> cybershieldcheck.com</p>
+                    <p><strong>1. Zero Password &amp; Assessment Collection:</strong> CyberShield Check does not collect, transmit, store, or log any passwords, passphrases, or quiz responses entered into our tools. All diagnostic processing occurs 100% locally within your browser memory and is cleared immediately when you close or refresh the page.</p>
+                    <p><strong>2. Advertising &amp; Third-Party Cookies (Google AdSense):</strong> To keep our diagnostic tools and guides free, we partner with Google AdSense. Third-party vendors, including Google, use cookies (such as the DoubleClick DART cookie) to serve ads based on a user's prior visits to <span class="font-mono text-xs">cybershieldcheck.com</span> or other websites on the internet.</p>
+                    <p><strong>3. Opt-Out &amp; GDPR/CCPA Rights:</strong> Google's use of advertising cookies enables it and its partners to serve ads to users based on their visit to our site and/or other sites on the Internet. Users may opt out of personalized advertising by visiting <a href="https://adssettings.google.com" target="_blank" rel="noopener" class="text-emerald-400 underline">Google Ads Settings</a> or <a href="https://www.aboutads.info/choices/" target="_blank" rel="noopener" class="text-emerald-400 underline">www.aboutads.info</a>.</p>
+                    <p><strong>4. Server &amp; CDN Log Files:</strong> Our hosting infrastructure (GitHub Pages / Fastly CDN) may process standard anonymized technical metadata (such as browser user-agent strings and timestamps) strictly for TLS encryption delivery and DDoS protection.</p>
+                    <p><strong>5. Data Protection Contact:</strong> For any privacy inquiries, contact Joel Agboike directly at <a href="mailto:joelagboike6k@gmail.com" class="text-emerald-400 underline font-mono">joelagboike6k@gmail.com</a>.</p>
                 `
             },
             terms: {
-                title: 'Terms of Service & Disclaimer',
+                title: 'Terms of Service & Disclaimer (cybershieldcheck.com)',
                 body: `
-                    <p><strong>1. Acceptance of Terms:</strong> By accessing CyberShield Check, you agree to be bound by these Terms of Service and all applicable laws and regulations.</p>
-                    <p><strong>2. Educational & Diagnostic Purpose:</strong> The Password Entropy Analyzer and Cyber Risk Assessment provide mathematical estimates based on standard brute-force hardware benchmarks. They do not guarantee absolute immunity against targeted cyberattacks, keyloggers, or zero-day exploits.</p>
-                    <p><strong>3. No Warranty:</strong> All tools and articles are provided on an "as-is" basis without warranties of any kind. CyberShield Check shall not be held liable for any damages resulting from the use or inability to use the diagnostic tools on this site.</p>
+                    <p><strong>1. Acceptance of Terms:</strong> By accessing and using <strong>cybershieldcheck.com</strong>, you agree to comply with these Terms of Service and all applicable laws and regulations.</p>
+                    <p><strong>2. Educational &amp; Diagnostic Purpose:</strong> The Password Entropy &amp; Crack-Time Analyzer and Personal Cyber Risk Assessment provide mathematical estimates based on standard GPU brute-force hardware benchmarks and industry best practices. They are intended for educational and self-auditing purposes only and do not guarantee absolute immunity against targeted cyberattacks, keyloggers, or zero-day exploits.</p>
+                    <p><strong>3. Intellectual Property:</strong> All original cybersecurity guides, diagnostic scripts, and design layouts published on CyberShield Check are &copy; 2026 CyberShield Check. You may share links to our articles and tools with proper attribution.</p>
+                    <p><strong>4. Limitation of Liability:</strong> All tools and articles on cybershieldcheck.com are provided on an "as-is" basis without warranties of any kind. CyberShield Check and its founder shall not be liable for any direct or indirect damages resulting from the use of information or tools on this website.</p>
                 `
             },
             contact: {
-                title: 'Contact Our Security & Editorial Team',
+                title: 'Contact CyberShield Check',
                 body: `
-                    <p>Have a question about our cryptographic formulas, want to report a bug, or have an advertising inquiry? Reach out to our team below.</p>
-                    <div class="bg-navy-950 border border-slate-800 rounded-xl p-4 space-y-2 text-xs font-mono">
-                        <div><span class="text-slate-400">Editorial & General:</span> <span class="text-emerald-400">support@cybershieldcheck.example.com</span></div>
-                        <div><span class="text-slate-400">Security Disclosures:</span> <span class="text-emerald-400">security@cybershieldcheck.example.com</span></div>
-                        <div><span class="text-slate-400">Response SLA:</span> <span class="text-slate-200">24–48 Business Hours</span></div>
+                    <p>Have a question about our cryptographic formulas, want to suggest a new security calculator, or have an editorial or advertising inquiry for <strong>cybershieldcheck.com</strong>? Reach out directly below.</p>
+                    <div class="bg-navy-950 border border-slate-800 rounded-xl p-4 space-y-2.5 text-xs font-mono">
+                        <div class="flex flex-wrap items-center justify-between gap-2">
+                            <div><span class="text-slate-400">Direct Email:</span> <a href="mailto:joelagboike6k@gmail.com" class="text-emerald-400 underline">joelagboike6k@gmail.com</a></div>
+                            <button type="button" onclick="copyContactEmail()" class="px-2.5 py-1 rounded bg-slate-800 hover:bg-slate-700 text-slate-200 transition">Copy Email</button>
+                        </div>
+                        <div><span class="text-slate-400">Founder &amp; Editor:</span> <span class="text-slate-200">Joel Agboike (B.Ed. Computer Science)</span></div>
+                        <div><span class="text-slate-400">Website:</span> <span class="text-slate-200">https://cybershieldcheck.com</span></div>
+                        <div><span class="text-slate-400">Response Time:</span> <span class="text-slate-200">24–48 Business Hours</span></div>
+                        <div id="email-copy-msg" class="hidden text-emerald-400 font-sans font-medium">Email copied to clipboard!</div>
                     </div>
                     <form onsubmit="handleContactSubmit(event)" class="space-y-3 pt-2">
                         <div>
@@ -850,13 +1119,31 @@
                             <textarea rows="3" required placeholder="How can we help?" class="w-full bg-navy-950 border border-slate-700 rounded-lg px-3 py-2 text-white text-sm outline-none focus:border-emerald-500"></textarea>
                         </div>
                         <button type="submit" class="px-4 py-2 rounded-lg bg-emerald-500 hover:bg-emerald-600 text-navy-950 font-semibold text-xs transition">
-                            Send Inquiry
+                            Send Message
                         </button>
-                        <p id="contact-status" class="hidden text-xs text-emerald-400 font-medium pt-1">Thank you! Your message has been queued for our editorial desk.</p>
+                        <p id="contact-status" class="hidden text-xs text-emerald-400 font-medium pt-1">Thank you! For fastest delivery on static hosting, you may also email joelagboike6k@gmail.com directly.</p>
                     </form>
                 `
             }
         };
+
+        function copyContactEmail() {
+            const tempInput = document.createElement('input');
+            tempInput.value = 'joelagboike6k@gmail.com';
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            try {
+                document.execCommand('copy');
+                const msg = document.getElementById('email-copy-msg');
+                if (msg) {
+                    msg.classList.remove('hidden');
+                    setTimeout(() => msg.classList.add('hidden'), 2000);
+                }
+            } catch (err) {
+                console.error('Copy failed', err);
+            }
+            document.body.removeChild(tempInput);
+        }
 
         function openModal(type) {
             const data = legalContent[type];
