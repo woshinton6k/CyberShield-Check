@@ -80,7 +80,7 @@
   <!-- Top Navigation -->
   <header class="sticky top-0 z-40 border-b border-slate-800/80 bg-slate-950/90 backdrop-blur-md">
     <div class="mx-auto flex max-w-6xl items-center justify-between px-4 py-3.5 sm:px-6">
-      <a href="#" class="flex items-center gap-2.5 text-lg font-bold tracking-tight text-white">
+      <a href="/" class="flex items-center gap-2.5 text-lg font-bold tracking-tight text-white">
         <span class="flex h-9 w-9 items-center justify-center rounded-xl bg-emerald-600/20 border border-emerald-500/40 text-emerald-400">
           <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2.2">
             <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75m-3-7.036A11.959 11.959 0 013.598 6 11.99 11.99 0 003 9.749c0 5.592 3.824 10.29 9 11.623 5.176-1.332 9-6.03 9-11.622 0-1.31-.21-2.571-.598-3.751h-.152c-3.196 0-6.1-1.248-8.25-3.285z" />
@@ -90,7 +90,7 @@
       </a>
 
       <nav class="hidden md:flex items-center gap-6 text-sm font-medium text-slate-300">
-        <a href="tools" class="hover:text-emerald-400 transition">Security Tools</a>
+        <a href="#tools" class="hover:text-emerald-400 transition">Security Tools</a>
         <a href="/guides" class="hover:text-emerald-400 transition">Security Guides</a>
         <a href="/about" class="hover:text-emerald-400 transition">About</a>
         <a href="/privacy" class="hover:text-emerald-400 transition">Privacy &amp; Terms</a>
@@ -98,7 +98,7 @@
       </nav>
 
       <!-- Mobile Menu Button -->
-      <button id="mobileMenuBtn" class="md:hidden rounded-lg border border-slate-800 p-2 text-slate-300 hover:text-white" aria-label="Open Navigation Menu">
+      <button id="mobileMenuBtn" type="button" onclick="document.getElementById('mobileMenu').classList.toggle('hidden')" class="md:hidden rounded-lg border border-slate-800 p-2 text-slate-300 hover:text-white" aria-label="Open Navigation Menu">
         <svg class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
           <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16" />
         </svg>
@@ -108,12 +108,11 @@
     <!-- Mobile Nav Drawer -->
     <div id="mobileMenu" class="hidden border-t border-slate-800 bg-slate-900 px-4 py-4 md:hidden">
       <div class="flex flex-col gap-3 text-sm font-medium text-slate-300">
-        <a href="tools" onclick="toggleMobileMenu()" class="hover:text-emerald-400">Security Tools</a>
-        <a href="guides" onclick="toggleMobileMenu()" class="hover:text-emerald-400">Security Guides</a>
-        <a href="about" onclick="toggleMobileMenu()" class="hover:text-emerald-400">About</a>
-        <button onclick="toggleMobileMenu(); openModal('privacyModal')" class="text-left hover:text-emerald-400">Privacy Policy</button>
-        <button onclick="toggleMobileMenu(); openModal('termsModal')" class="text-left hover:text-emerald-400">Terms of Service</button>
-        <button onclick="toggleMobileMenu(); openModal('contactModal')" class="mt-1 rounded-lg bg-emerald-600 px-3.5 py-2 text-center text-white font-semibold">Contact</button>
+        <a href="#tools" onclick="document.getElementById('mobileMenu').classList.add('hidden')" class="hover:text-emerald-400">Security Tools</a>
+        <a href="/guides" onclick="document.getElementById('mobileMenu').classList.add('hidden')" class="hover:text-emerald-400">Security Guides</a>
+        <a href="/about" onclick="document.getElementById('mobileMenu').classList.add('hidden')" class="hover:text-emerald-400">About</a>
+        <a href="/privacy" onclick="document.getElementById('mobileMenu').classList.add('hidden')" class="hover:text-emerald-400">Privacy &amp; Terms</a>
+        <a href="/about" onclick="document.getElementById('mobileMenu').classList.add('hidden')" class="mt-1 rounded-lg bg-emerald-600 px-3.5 py-2 text-center text-white font-semibold">Contact</a>
       </div>
     </div>
   </header>
@@ -451,4 +450,460 @@
               Three interlocking DNS records close this loophole: <strong>SPF (Sender Policy Framework)</strong> lists every IP address or mail provider authorized to send email on behalf of your domain; <strong>DKIM (DomainKeys Identified Mail)</strong> attaches a tamper-evident cryptographic signature to every outbound message; and <strong>DMARC (Domain-based Message Authentication, Reporting, and Conformance)</strong> instructs receiving mail servers to quarantine or reject any email that fails SPF and DKIM alignment.
             </p>
             <p>
-              Even if
+              Even if you own a domain that never sends email, publishing <code class="text-emerald-300">v=spf1 -all</code> alongside a DMARC record set to <code class="text-emerald-300">p=reject</code> stops scammers from spoofing your brand name to deceive customers.
+            </p>
+          </div>
+          <button type="button" onclick="toggleGuide('guide-4', this)" class="mt-4 inline-flex items-center gap-1.5 text-xs font-mono font-semibold text-emerald-400 hover:text-emerald-300">
+            Read Full Guide ↓
+          </button>
+        </article>
+
+        <!-- Guide 5 -->
+        <article class="glass-card rounded-2xl p-6 sm:p-8">
+          <div class="flex flex-wrap items-center justify-between gap-2 text-xs font-mono text-emerald-400">
+            <span>GUIDE 05 • ZERO-TRUST HOME &amp; REMOTE NETWORKS</span>
+            <span>6 MIN READ • UPDATED 2026</span>
+          </div>
+          <h3 class="mt-2 text-xl font-bold text-white sm:text-2xl">Hardening Home &amp; Remote-Work Routers: DNS Filtering, VLAN Segmentation, and UPnP</h3>
+          <div id="guide-5" class="guide-collapsed mt-4 space-y-4 text-sm text-slate-300 leading-relaxed">
+            <p>
+              Remote workers routinely connect corporate laptops to the exact same flat Wi-Fi network as smart TVs, budget IP cameras, and guest phones. If an unpatched smart-home gadget is compromised, lateral movement gives attackers a direct foothold inside your local subnet.
+            </p>
+            <p>
+              Start by disabling <strong>Universal Plug and Play (UPnP)</strong> and WPS in your router's administration panel so malware on a local device cannot silently open inbound firewall ports. Next, place all IoT smart devices onto your router's isolated <strong>Guest Wi-Fi network</strong>, keeping work laptops and phones on the primary WPA3-encrypted SSID. Finally, configure encrypted DNS resolvers such as Quad9 (<code class="text-emerald-300">9.9.9.9</code>) or Cloudflare Malware Blocking (<code class="text-emerald-300">1.1.1.2</code>) at the router level to block known command-and-control and phishing domains before a browser connection ever completes.
+            </p>
+          </div>
+          <button type="button" onclick="toggleGuide('guide-5', this)" class="mt-4 inline-flex items-center gap-1.5 text-xs font-mono font-semibold text-emerald-400 hover:text-emerald-300">
+            Read Full Guide ↓
+          </button>
+        </article>
+
+        <!-- Guide 6 -->
+        <article class="glass-card rounded-2xl p-6 sm:p-8">
+          <div class="flex flex-wrap items-center justify-between gap-2 text-xs font-mono text-emerald-400">
+            <span>GUIDE 06 • RANSOMWARE RESILIENCE</span>
+            <span>6 MIN READ • UPDATED 2026</span>
+          </div>
+          <h3 class="mt-2 text-xl font-bold text-white sm:text-2xl">The 3-2-1-1-0 Immutable Backup Strategy Against Modern Ransomware</h3>
+          <div id="guide-6" class="guide-collapsed mt-4 space-y-4 text-sm text-slate-300 leading-relaxed">
+            <p>
+              Modern Ransomware-as-a-Service (RaaS) operators do not merely encrypt local drives—their first automated payload hunts down mapped network shares, Windows Volume Shadow Copies, and synced cloud folders to destroy backups before launching encryption.
+            </p>
+            <p>
+              To guarantee recovery without paying extortion demands, adopt the <strong>3-2-1-1-0 backup architecture</strong>: maintain <strong>3</strong> total copies of critical data across <strong>2</strong> different storage media types, with <strong>1</strong> copy stored offsite, at least <strong>1</strong> copy kept strictly <strong>offline or immutable</strong> (using Object Lock / WORM storage that cannot be altered or deleted even with admin credentials for a set retention window), and <strong>0</strong> unverified errors through quarterly test restores.
+            </p>
+          </div>
+          <button type="button" onclick="toggleGuide('guide-6', this)" class="mt-4 inline-flex items-center gap-1.5 text-xs font-mono font-semibold text-emerald-400 hover:text-emerald-300">
+            Read Full Guide ↓
+          </button>
+        </article>
+
+        <!-- Guide 7 -->
+        <article class="glass-card rounded-2xl p-6 sm:p-8">
+          <div class="flex flex-wrap items-center justify-between gap-2 text-xs font-mono text-emerald-400">
+            <span>GUIDE 07 • BROWSER &amp; ENDPOINT SECURITY</span>
+            <span>5 MIN READ • UPDATED 2026</span>
+          </div>
+          <h3 class="mt-2 text-xl font-bold text-white sm:text-2xl">Defeating Infostealer Malware &amp; Session Token Theft in Modern Web Browsers</h3>
+          <div id="guide-7" class="guide-collapsed mt-4 space-y-4 text-sm text-slate-300 leading-relaxed">
+            <p>
+              Infostealer families (such as Lumma, RedLine, and Vidar) are typically disguised as pirated software installers, cracked utilities, or fake browser updates. Once executed, they sweep browser profile directories in seconds to exfiltrate saved passwords, autofill credit cards, and active OAuth session cookies.
+            </p>
+            <p>
+              Never store high-value banking or cloud passwords inside your browser's built-in password manager—use a dedicated zero-knowledge password manager locked with a separate master passphrase and hardware key. Enable <strong>Application-Bound Encryption</strong> in Chrome/Edge, audit installed browser extensions monthly, and always log out of sensitive financial sessions when finished rather than leaving persistent cookies active indefinitely.
+            </p>
+          </div>
+          <button type="button" onclick="toggleGuide('guide-7', this)" class="mt-4 inline-flex items-center gap-1.5 text-xs font-mono font-semibold text-emerald-400 hover:text-emerald-300">
+            Read Full Guide ↓
+          </button>
+        </article>
+
+        <!-- Guide 8 -->
+        <article class="glass-card rounded-2xl p-6 sm:p-8">
+          <div class="flex flex-wrap items-center justify-between gap-2 text-xs font-mono text-emerald-400">
+            <span>GUIDE 08 • FINANCIAL &amp; FINTECH DEFENSE</span>
+            <span>6 MIN READ • UPDATED 2026</span>
+          </div>
+          <h3 class="mt-2 text-xl font-bold text-white sm:text-2xl">Compartmentalizing Banking, Virtual Cards, and Recovery Emails</h3>
+          <div id="guide-8" class="guide-collapsed mt-4 space-y-4 text-sm text-slate-300 leading-relaxed">
+            <p>
+              Using one primary email address for social media signups, e-commerce checkouts, and online banking creates a single point of catastrophic failure. When an online retailer suffers a breach, attackers immediately gain the exact login identifier for your bank.
+            </p>
+            <p>
+              Practice <strong>identity compartmentalization</strong>: maintain a dedicated, private email address used strictly for banking, tax portals, and domain registrars—never enter it on newsletters or public websites. Pair online purchases with single-merchant or spending-capped <strong>virtual debit cards</strong> so a compromised merchant checkout page can never drain your primary checking balance.
+            </p>
+          </div>
+          <button type="button" onclick="toggleGuide('guide-8', this)" class="mt-4 inline-flex items-center gap-1.5 text-xs font-mono font-semibold text-emerald-400 hover:text-emerald-300">
+            Read Full Guide ↓
+          </button>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- About & Editorial Standards Section -->
+  <section id="about" class="border-t border-slate-800/80 py-14">
+    <div class="mx-auto max-w-5xl px-4 sm:px-6">
+      <div class="glass-card rounded-2xl p-6 sm:p-8">
+        <span class="font-mono text-xs font-semibold uppercase tracking-widest text-emerald-400">About CyberShield Check</span>
+        <h2 class="mt-2 text-2xl font-bold text-white">Zero-Knowledge Security Utilities &amp; Independent Threat Research</h2>
+        <p class="mt-3 text-sm text-slate-300 leading-relaxed">
+          <strong>CyberShield Check</strong> (<code class="text-emerald-400">cybershieldcheck.com</code>) was created and maintained by <strong>Mr. Soulwizard</strong>, a Cybersecurity Defense Specialist, to give everyday users, remote professionals, and small business owners fast, transparent tools to evaluate their digital security posture without handing sensitive passwords or personal identifiers to third-party servers.
+        </p>
+        <p class="mt-3 text-sm text-slate-300 leading-relaxed">
+          Every cryptographic calculation, URL dissection, and risk assessment on this platform runs 100% locally inside your web browser's memory. Our editorial guides are benchmarked against NIST SP 800-63B digital identity standards, CISA cybersecurity hygiene recommendations, and RFC email authentication specifications.
+        </p>
+        <div class="mt-5 flex flex-wrap items-center gap-4 text-xs font-mono text-slate-300">
+          <span>Editorial &amp; Security Contact: <a href="mailto:soulwizard6k@gmail.com" class="text-emerald-400 underline">soulwizard6k@gmail.com</a></span>
+          <span>•</span>
+          <span>Domain: cybershieldcheck.com</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="border-t border-slate-800/80 bg-slate-950 py-10 text-xs text-slate-400">
+    <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-4 sm:flex-row sm:px-6">
+      <div>
+        <span class="font-semibold text-slate-200">© 2026 CyberShield Check (cybershieldcheck.com).</span> All rights reserved.
+      </div>
+      <div class="flex flex-wrap items-center gap-5">
+        <a href="#tools" class="hover:text-emerald-400">Tools</a>
+        <a href="/guides" class="hover:text-emerald-400">Guides</a>
+        <a href="/about" class="hover:text-emerald-400">About</a>
+        <a href="/privacy" class="hover:text-emerald-400">Privacy Policy</a>
+        <a href="/privacy" class="hover:text-emerald-400">Terms of Service</a>
+        <a href="/about" class="hover:text-emerald-400">Contact</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Client-Side JavaScript Logic -->
+  <script>
+    function toggleGuide(guideId, btn) {
+      const box = document.getElementById(guideId);
+      const collapsed = box.classList.toggle('guide-collapsed');
+      btn.textContent = collapsed ? 'Read Full Guide ↓' : 'Collapse Guide ↑';
+    }
+
+    // TOOL 01: Password Entropy Analyzer
+    function togglePwVisibility() {
+      const input = document.getElementById('pwInput');
+      const btn = document.getElementById('pwToggleBtn');
+      if (input.type === 'password') {
+        input.type = 'text';
+        btn.textContent = 'Hide';
+      } else {
+        input.type = 'password';
+        btn.textContent = 'Show';
+      }
+    }
+
+    function clearPassword() {
+      document.getElementById('pwInput').value = '';
+      analyzePassword();
+    }
+
+    function generateStrongPassphrase() {
+      const words = [
+        'cipher','bastion','glacier','falcon','vertex','quartz','lantern','harbor',
+        'obsidian','compass','summit','anvil','mercury','zephyr','sentinel','cobalt',
+        'timber','horizon','prism','anchor','granite','orbit','nectar','phoenix'
+      ];
+      const arr = new Uint32Array(4);
+      window.crypto.getRandomValues(arr);
+      const chosen = Array.from(arr).map(n => words[n % words.length]);
+      const num = (arr[0] % 90) + 10;
+      const input = document.getElementById('pwInput');
+      input.type = 'text';
+      document.getElementById('pwToggleBtn').textContent = 'Hide';
+      input.value = `${chosen.join('-')}-${num}`;
+      analyzePassword();
+    }
+
+    function formatDuration(seconds) {
+      if (seconds < 1) return 'Instant (< 1 sec)';
+      if (seconds < 60) return `${Math.round(seconds)} seconds`;
+      const minutes = seconds / 60;
+      if (minutes < 60) return `${Math.round(minutes)} minutes`;
+      const hours = minutes / 60;
+      if (hours < 24) return `${Math.round(hours)} hours`;
+      const days = hours / 24;
+      if (days < 365) return `${Math.round(days)} days`;
+      const years = days / 365.25;
+      if (years < 1000) return `${Math.round(years)} years`;
+      if (years < 1e6) return `${(years / 1000).toFixed(1)}k years`;
+      if (years < 1e9) return `${(years / 1e6).toFixed(1)}M years`;
+      if (years < 1e12) return `${(years / 1e9).toFixed(1)}B years`;
+      return '1+ Trillion years';
+    }
+
+    function analyzePassword() {
+      const pw = document.getElementById('pwInput').value;
+      const ratingEl = document.getElementById('pwRating');
+      const barEl = document.getElementById('pwBar');
+      const entropyEl = document.getElementById('pwEntropy');
+      const poolEl = document.getElementById('pwPool');
+      const crackEl = document.getElementById('pwCrackTime');
+      const adviceEl = document.getElementById('pwAdvice');
+
+      if (!pw) {
+        ratingEl.textContent = 'Awaiting Input';
+        ratingEl.className = 'font-bold text-slate-300';
+        barEl.style.width = '0%';
+        entropyEl.textContent = '0 bits';
+        poolEl.textContent = '0 chars';
+        crackEl.textContent = '—';
+        adviceEl.innerHTML = 'Tip: Aim for at least <strong class="text-emerald-400">75+ bits of entropy</strong> (16+ random characters or 4+ unrelated diceware words) for banking, email, and password manager vaults.';
+        return;
+      }
+
+      let pool = 0;
+      if (/[a-z]/.test(pw)) pool += 26;
+      if (/[A-Z]/.test(pw)) pool += 26;
+      if (/[0-9]/.test(pw)) pool += 10;
+      if (/[^a-zA-Z0-9]/.test(pw)) pool += 33;
+
+      const entropy = Math.round(pw.length * Math.log2(pool || 1));
+      const combinations = Math.pow(pool || 1, pw.length);
+      const seconds = combinations / 1e11;
+
+      entropyEl.textContent = `${entropy} bits`;
+      poolEl.textContent = `${pool} chars`;
+      crackEl.textContent = formatDuration(seconds);
+
+      let pct = Math.min(100, Math.round((entropy / 110) * 100));
+      barEl.style.width = `${pct}%`;
+
+      if (entropy < 40) {
+        ratingEl.textContent = 'Critical — Easily Cracked';
+        ratingEl.className = 'font-bold text-rose-400';
+        barEl.className = 'h-full rounded-full bg-rose-500 transition-all duration-300';
+        adviceEl.innerHTML = '<strong class="text-rose-400">High Risk:</strong> Offline GPU clusters can brute-force this in seconds to hours. Extend length to at least 14–16 characters.';
+      } else if (entropy < 65) {
+        ratingEl.textContent = 'Moderate — Vulnerable to Targeted Rig';
+        ratingEl.className = 'font-bold text-amber-400';
+        barEl.className = 'h-full rounded-full bg-amber-400 transition-all duration-300';
+        adviceEl.innerHTML = '<strong class="text-amber-400">Moderate Defense:</strong> Acceptable for low-risk forums, but add 1–2 more random words before using this on email or financial accounts.';
+      } else if (entropy < 85) {
+        ratingEl.textContent = 'Strong — Banking & Email Ready';
+        ratingEl.className = 'font-bold text-emerald-400';
+        barEl.className = 'h-full rounded-full bg-emerald-500 transition-all duration-300';
+        adviceEl.innerHTML = '<strong class="text-emerald-400">Strong Cryptographic Posture:</strong> Resistant to modern brute-force arrays. Pair with a FIDO2 passkey or hardware 2FA.';
+      } else {
+        ratingEl.textContent = 'Fortress — Vault Master Key Grade';
+        ratingEl.className = 'font-bold text-emerald-300';
+        barEl.className = 'h-full rounded-full bg-emerald-400 transition-all duration-300';
+        adviceEl.innerHTML = '<strong class="text-emerald-300">Maximum Resilience:</strong> Mathematically infeasible to brute-force with current or foreseeable silicon.';
+      }
+    }
+
+    // TOOL 02: Personal Cyber Risk Assessment
+    const quizData = [
+      {
+        q: '1. How do you manage passwords across your email, banking, and social accounts?',
+        options: [
+          { text: 'I reuse 1–3 favorite passwords across most websites', score: 0, tip: 'Eliminate password reuse with a dedicated zero-knowledge password manager.' },
+          { text: 'I write unique passwords down or save them in my browser', score: 10, tip: 'Move sensitive passwords out of browser autofill into an encrypted vault.' },
+          { text: 'Every account has a unique 16+ char random password in a password manager', score: 20, tip: '' }
+        ]
+      },
+      {
+        q: '2. What type of Two-Factor Authentication (2FA) protects your primary email?',
+        options: [
+          { text: 'No 2FA enabled—only a password', score: 0, tip: 'Enable 2FA on your primary email immediately—it controls password resets for every other account.' },
+          { text: 'SMS text message codes sent to my phone number', score: 10, tip: 'Upgrade your primary email from SMS 2FA to an authenticator app or FIDO2 passkey.' },
+          { text: 'Authenticator app (TOTP), FIDO2 Passkey, or hardware security key', score: 20, tip: '' }
+        ]
+      },
+      {
+        q: '3. Have you set a carrier Port-Out / Number Transfer PIN on your mobile phone account?',
+        options: [
+          { text: 'No, or I am not sure what a carrier Port-Out PIN is', score: 0, tip: 'Contact your mobile carrier to lock your SIM/number with a dedicated Port-Out PIN.' },
+          { text: 'I have a carrier PIN, and I avoid using SMS for banking 2FA', score: 20, tip: '' }
+        ]
+      },
+      {
+        q: '4. How do you handle urgent login links received via SMS, WhatsApp, or email?',
+        options: [
+          { text: 'I click the link and sign in if the page logo looks official', score: 0, tip: 'Never log in through emailed or texted links—open a fresh tab and type the official domain manually.' },
+          { text: 'I ignore the link and navigate directly via my own bookmark or official app', score: 20, tip: '' }
+        ]
+      },
+      {
+        q: '5. How are your critical documents and photos backed up against ransomware or device loss?',
+        options: [
+          { text: 'Only stored on my primary laptop or phone', score: 0, tip: 'Follow the 3-2-1 backup rule with at least one offline or immutable cloud backup.' },
+          { text: 'Synced to cloud storage AND backed up to an offline/immutable drive', score: 20, tip: '' }
+        ]
+      }
+    ];
+
+    let currentStep = 0;
+    let totalScore = 0;
+    let collectedTips = [];
+
+    function renderQuiz() {
+      const qObj = quizData[currentStep];
+      document.getElementById('quizProgressBadge').textContent = `Question ${currentStep + 1} of ${quizData.length}`;
+      document.getElementById('quizQuestion').textContent = qObj.q;
+      const optionsBox = document.getElementById('quizOptions');
+      optionsBox.innerHTML = '';
+
+      qObj.options.forEach(opt => {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.className = 'w-full rounded-xl border border-slate-700/90 bg-slate-950/90 px-4 py-3 text-left text-sm text-slate-200 hover:border-emerald-500 hover:bg-slate-900 transition';
+        btn.textContent = opt.text;
+        btn.onclick = () => selectQuizOption(opt.score, opt.tip);
+        optionsBox.appendChild(btn);
+      });
+    }
+
+    function selectQuizOption(score, tip) {
+      totalScore += score;
+      if (tip) collectedTips.push(tip);
+      currentStep++;
+      if (currentStep < quizData.length) {
+        renderQuiz();
+      } else {
+        showQuizResult();
+      }
+    }
+
+    function showQuizResult() {
+      document.getElementById('quizContainer').classList.add('hidden');
+      const resBox = document.getElementById('quizResult');
+      resBox.classList.remove('hidden');
+      document.getElementById('quizProgressBadge').textContent = 'Audit Complete';
+      document.getElementById('quizScoreBadge').textContent = `${totalScore} / 100`;
+
+      const summary = document.getElementById('quizSummary');
+      if (totalScore >= 80) {
+        summary.textContent = 'High Resilience: Your core identity controls resist automated credential stuffing and common phishing traps.';
+      } else if (totalScore >= 50) {
+        summary.textContent = 'Moderate Exposure: You have foundational protections, but targeted SIM-swap or AiTM phishing could compromise key accounts.';
+      } else {
+        summary.textContent = 'Elevated Account-Takeover Risk: Attackers using leaked credentials or spoofed login links have clear paths into your accounts.';
+      }
+
+      const list = document.getElementById('quizActionList');
+      list.innerHTML = collectedTips.length
+        ? collectedTips.map(t => `<li>${t}</li>`).join('')
+        : '<li>Maintain quarterly security audits and keep OS/browser auto-updates active.</li>';
+    }
+
+    function resetQuiz() {
+      currentStep = 0;
+      totalScore = 0;
+      collectedTips = [];
+      document.getElementById('quizResult').classList.add('hidden');
+      document.getElementById('quizContainer').classList.remove('hidden');
+      renderQuiz();
+    }
+    renderQuiz();
+
+    // TOOL 03: Email Domain Spoofing Check (Live DNS-over-HTTPS)
+    async function runEmailDomainCheck() {
+      const raw = document.getElementById('emailCheckInput').value.trim().toLowerCase();
+      const out = document.getElementById('emailCheckOutput');
+      if (!raw) {
+        out.innerHTML = '<span class="text-amber-400">Please enter an email address or domain name first.</span>';
+        return;
+      }
+
+      const domain = raw.includes('@') ? raw.split('@').pop() : raw.replace(/^https?:\/\//, '').split('/')[0];
+      if (!domain || !domain.includes('.')) {
+        out.innerHTML = '<span class="text-rose-400">Invalid domain format. Example: cybershieldcheck.com</span>';
+        return;
+      }
+
+      const disposableList = ['mailinator.com','tempmail.com','10minutemail.com','guerrillamail.com','yopmail.com','throwawaymail.com'];
+      if (disposableList.includes(domain)) {
+        out.innerHTML = `<div class="text-rose-400 font-bold">Warning: Disposable Burner Domain (${domain})</div><p class="mt-1">This domain belongs to a public temporary inbox service frequently abused for spam and scam registration.</p>`;
+        return;
+      }
+
+      out.innerHTML = `<div class="font-mono text-emerald-400">Querying public SPF &amp; DMARC records for <strong>${domain}</strong>...</div>`;
+
+      try {
+        const [spfRes, dmarcRes] = await Promise.all([
+          fetch(`https://cloudflare-dns.com/dns-query?name=${encodeURIComponent(domain)}&type=TXT`, { headers: { 'Accept': 'application/dns-json' } }).then(r => r.json()),
+          fetch(`https://cloudflare-dns.com/dns-query?name=_dmarc.${encodeURIComponent(domain)}&type=TXT`, { headers: { 'Accept': 'application/dns-json' } }).then(r => r.json())
+        ]);
+
+        const spfRecords = (spfRes.Answer || []).map(a => a.data).filter(d => d.toLowerCase().includes('v=spf1'));
+        const dmarcRecords = (dmarcRes.Answer || []).map(a => a.data).filter(d => d.toLowerCase().includes('v=dmarc1'));
+
+        const hasSpf = spfRecords.length > 0;
+        const hasDmarc = dmarcRecords.length > 0;
+        const strictDmarc = dmarcRecords.some(r => r.includes('p=reject') || r.includes('p=quarantine'));
+
+        out.innerHTML = `
+          <div class="flex items-center justify-between border-b border-slate-800 pb-2">
+            <span class="font-mono font-bold text-white">Domain: ${domain}</span>
+            <span class="font-mono font-bold ${hasSpf && strictDmarc ? 'text-emerald-400' : 'text-amber-400'}">
+              ${hasSpf && strictDmarc ? 'Protected Against Spoofing' : 'Partial / Weak Spoof Defense'}
+            </span>
+          </div>
+          <div class="space-y-1.5 pt-1 font-mono text-xs">
+            <div><span class="text-slate-400">SPF Record:</span> ${hasSpf ? '<span class="text-emerald-400">Present ✓</span>' : '<span class="text-rose-400">Missing ✕</span>'}</div>
+            <div><span class="text-slate-400">DMARC Policy:</span> ${hasDmarc ? `<span class="text-emerald-400">Present ✓</span> (${strictDmarc ? 'Enforced p=reject/quarantine' : 'Monitoring only p=none'})` : '<span class="text-rose-400">Missing ✕ (Spoofable)</span>'}</div>
+          </div>
+        `;
+      } catch (err) {
+        out.innerHTML = '<span class="text-rose-400">Unable to reach public DNS resolver right now. Check your internet connection and retry.</span>';
+      }
+    }
+
+    // TOOL 04: Suspicious Link & Phishing URL Inspector
+    function inspectSuspiciousUrl() {
+      let raw = document.getElementById('urlInspectInput').value.trim();
+      const out = document.getElementById('urlInspectOutput');
+      if (!raw) {
+        out.innerHTML = '<span class="text-amber-400">Paste a link above to inspect its domain structure safely.</span>';
+        return;
+      }
+      if (!/^https?:\/\//i.test(raw)) raw = 'http://' + raw;
+
+      let parsed;
+      try {
+        parsed = new URL(raw);
+      } catch (e) {
+        out.innerHTML = '<span class="text-rose-400">Malformed URL. Make sure you pasted a valid web link.</span>';
+        return;
+      }
+
+      const host = parsed.hostname.toLowerCase();
+      const flags = [];
+
+      if (parsed.protocol === 'http:') flags.push('Uses unencrypted HTTP instead of HTTPS.');
+      if (host.startsWith('xn--') || host.includes('.xn--')) flags.push('Punycode / Homograph IDN domain detected—may imitate a legitimate brand with foreign lookalike letters.');
+      if (/^\d{1,3}(\.\d{1,3}){3}$/.test(host)) flags.push('Raw IP address host instead of a registered domain name (common malware/phishing indicator).');
+      if (raw.includes('@')) flags.push('Contains an "@" symbol in the URL—browsers ignore everything before "@" to disguise the real destination.');
+      if (host.split('.').length >= 4) flags.push('Deeply nested subdomains—check the final two domain parts carefully for brand impersonation.');
+
+      const shorteners = ['bit.ly','tinyurl.com','t.co','goo.gl','ow.ly','is.gd','cutt.ly','rb.gy'];
+      if (shorteners.includes(host)) flags.push('URL shortener detected—hides the true destination domain until clicked.');
+
+      const riskyTlds = ['.xyz','.top','.click','.gq','.tk','.ml','.zip','.mov','.work'];
+      if (riskyTlds.some(tld => host.endsWith(tld))) flags.push(`High-abuse top-level domain (${host.slice(host.lastIndexOf('.'))}) frequently used in disposable phishing kits.`);
+
+      const statusColor = flags.length === 0 ? 'text-emerald-400' : (flags.length === 1 ? 'text-amber-400' : 'text-rose-400');
+      const statusText = flags.length === 0 ? 'No Structural Red Flags Found' : `${flags.length} Warning Signal${flags.length > 1 ? 's' : ''} Detected`;
+
+      out.innerHTML = `
+        <div class="flex items-center justify-between border-b border-slate-800 pb-2">
+          <span class="font-mono font-bold text-white truncate max-w-[60%]">Host: ${host}</span>
+          <span class="font-mono font-bold ${statusColor}">${statusText}</span>
+        </div>
+        ${flags.length
+          ? `<ul class="mt-2 list-disc space-y-1 pl-4 text-xs text-slate-200">${flags.map(f => `<li>${f}</li>`).join('')}</ul>`
+          : '<p class="mt-2 text-xs text-slate-300">Clean HTTPS structure with standard domain depth. Always verify the sender before entering credentials.</p>'}
+      `;
+    }
+  </script>
+</body>
+</html>
